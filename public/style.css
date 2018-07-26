@@ -63,3 +63,7 @@ input {
 #message {
   width: 315px;
 }
+
+#username {
+  width: 75px;
+}

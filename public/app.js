@@ -2,10 +2,14 @@
 // alert('Hello world');
 var socket= io();
 
-$('form').on('click', function () {
+$('form').on('submit', function () {
   var text = $('#message').val();
-  socket.emit('message', text);
+  var username=$('#username').val();
+  var message = username + ': ' + text
+  socket.emit('message', message);
   $('#message').val('');
+  $('#username').val('');
+
   return false //disables default html
 })
 
